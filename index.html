@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega_Mart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 id="nav">Mega <em>Mart</em></h1>
+        <ul>
+            <li><button onclick="window.location.href='Home.html'">🏚️Home</button></li>
+            <li><button onclick="window.location.href='Product.html'">🛍️Product</button></li>
+            <li><button onclick="window.location.href='payment.html'">💸Buy</button></li>
+            <li><button onclick="window.location.href='Cart.html'">🛒Cart</button></li>
+            <li><button  onclick="window.location.href='index.html'">👤Login</button></li>
+        </ul>
+    </nav>
+
+    <style>
+        .navbar{
+              margin: 0px;
+              color: azure;
+              background-color: darkorange;
+              padding: 20px;
+              position: sticky;
+              top: 0;
+        }
+        #nav{
+            color:white
+        }
+        ul,li,h1{
+              display: inline;
+        }
+       ul{
+              margin-left: 50%;
+        }
+        button{
+    margin-left: 20px;
+    border: 2px;
+    width: 79px;
+    height: 30px;
+    border-radius: 5px;
+    background-color:brown ;
+    color: white;
+}
+button:hover{
+    transform: scale(0.9);
+    background-color:navy;
+}
+ 
+       body{
+    background:linear-gradient(to bottom, #fff3e0,orange);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-height: 100vh;
+    min-width: 100vw;
+    position: absolute;
+}
+
+        .login-box{
+            width:350px;
+            background-color:rgb(245,245,245,0.5);
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+            margin-left:700px;
+           margin-top:0px;
+           position: relative;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h1{
+            color:#ff8c00;
+        }
+
+        #username,#password{
+            width:90%;
+            padding:12px;
+            height: 10px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+        
+        #loginBtn{
+            width:95%;
+            padding:12px;
+            background:#b52b2b;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:15px;
+            height:35px;
+            justify-content: center;
+            text-align: center;
+            margin-left:0px;
+        }
+        #loginBtn:hover{
+    transform: scale(0.9);
+    background-color:navy;
+        }
+        .image{
+            position: relative;
+            margin-left:300px;
+            margin-top:90px;
+            height: 100px;
+            width: 100px;
+        }
+        img{
+            height: 300px;
+            width: 300px;
+            border: none;
+        }
+    </style>
+<div class="image">
+    <img src="pikachu.png" alt="pikachu">
+</div>
+
+<div class="login-box">
+
+    <h1>Mega <em>Mart</em></h1>
+
+    <h2>Login 👤</h2>
+
+    <input type="text"
+           id="username"
+           placeholder="Enter Username">
+
+    <input type="password"
+           id="password"
+           placeholder="Enter Password">
+
+    <button onclick="login()" id="loginBtn">
+        Login
+    </button>
+
+</div>
+
+<script>
+
+function login(){
+
+    let username =
+    document.getElementById("username").value;
+
+    let password =
+    document.getElementById("password").value;
+
+    if(username=="admin" &&
+       password=="1234"){
+
+        alert("Login Successful");
+
+        window.location.href="Home.html";
+
+    }else{
+
+        alert("Invalid Username or Password");
+    }
+}
+
+</script>
+</body>
+
+</html>

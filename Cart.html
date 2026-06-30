@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega_Mart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="Card-page">
+    <nav class="navbar">
+        <h1 id="nav">Mega <em>Mart</em></h1>
+        <ul>
+            <li><button onclick="window.location.href='Home.html'">🏚️Home</button></li>
+            <li><button onclick="window.location.href='Product.html'">🛍️Product</button></li>
+            <li><button onclick="window.location.href='payment.html'">💸Buy</button></li>
+            <li><button onclick="window.location.href='Cart.html'">🛒Cart</button></li>
+            <li><button  onclick="window.location.href='index.html'">👤Login</button></li>
+        </ul>
+    </nav>
+    <h2>🛒 My Shopping Cart</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="cartBody">
+        </tbody>
+    </table>
+    <div class="payment-section">
+
+    <h2 id="totalPrice">Total : ₹0</h2>
+
+    <button onclick="goToPayment()">
+        OK
+    </button>
+
+</div>
+    </body>
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function displayCart(){
+
+    let cartBody = document.getElementById("cartBody");
+
+    let total = 0;
+
+    cartBody.innerHTML = "";
+
+    cart.forEach((item,index)=>{
+
+        total += item.price;
+
+        cartBody.innerHTML += `
+        <tr>
+            <td>${item.name}</td>
+            <td>₹${item.price}</td>
+            <td>
+                <button onclick="removeItem(${index})">
+                    Remove
+                </button>
+            </td>
+        </tr>`;
+    });
+
+    document.getElementById("totalPrice").innerHTML =
+    "Total : ₹" + total;
+}
+function goToPayment(){
+    alert("Confirm your Order");
+
+    localStorage.removeItem("cart");
+    let total = document.getElementById("totalPrice").innerText;
+    localStorage.setItem("totalPrice",total);
+
+    window.location.href = "payment.html";
+}
+
+
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    displayCart();
+}
+
+displayCart();
+
+</script>
+</html>

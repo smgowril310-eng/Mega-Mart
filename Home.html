@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega_Mart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Mega <em>Mart</em></h1>
+        <ul>
+            <li><button onclick="window.location.href='Home.html'">🏚️Home</button></li>
+            <li><button onclick="window.location.href='Product.html'">🛍️Product</button></li>
+            <li><button onclick="window.location.href='payment.html'">💸Buy</button></li>
+            <li><button onclick="window.location.href='Cart.html'">🛒Cart</button></li>
+            <li><button  onclick="window.location.href='index.html'">👤Login</button></li>
+        </ul>
+    </nav>
+    <input type="text" id="searchBox"
+       placeholder="Search the product"
+       onkeyup="searchProduct()">
+    <div class="product-card">
+        <center>
+        <img src="https://i5.walmartimages.com/seo/Poedagar-Men-Watch-Luxury-Business-Quartz-Watches-Stainless-Stain-Strap-Sport-Chronograph-Men-39-s-Wristwatch-Waterproof-Luminous-Quartz-Wristwatches_0a3f659e-2302-4d61-97fe-ebbeade9a540.a73cdee72274341e56791251134a46c4.jpeg"alt="Mens Watch" height="200px" width="200px">
+        <p>Mens Watch & Price: ₹999</p>
+        <button onclick="addToCart('Mens Watch',999)" id="btn1">Add to Cart</button>
+         </center>
+    </div>
+    <div class="product-card">
+        <center>
+        <img src="https://mysteryoffashion.com/cdn/shop/files/4H9A7418.jpg?v=1746104796&width=1946"alt="Mens dress" height="200px" width="200px">
+        <p>Mens dress & Price: ₹1999</p>
+        <button onclick="addToCart('Mens dress',1999)" id="btn1">Add to Cart</button>
+        </center>
+    </div>
+    <div class="product-card">
+        <center>
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRX1eD3Jmi3H16yPogTKLInwtZz3m7yViZl1fhNuR1FWP29IIYyVdMNraRdGMktIAwgKeGQ91PgSoCx8h1MTMudabdb0-SwDSMpRBnkSu9HkBT9D0tXFjNdqA"alt="Mens shoes" height="200px" width="200px">
+        <p>Mens shoes & Price: ₹2999</p>
+        <button onclick="addToCart('Mens shoes',2999)" id="btn1">Add to Cart</button>
+         </center>
+    </div>
+    <div class="product-card">
+        <center>
+        <img src="https://m.media-amazon.com/images/I/512hvqlxOuL._SY625_.jpg"alt="Mens Bracelet" height="200px" width="200px">
+        <p>Mens Bracelet & Price: ₹2999</p>
+        <button onclick="addToCart('Mens Bracelet',2999)" id="btn1">Add to Cart</button>
+         </center>
+    </div>
+    <div class="product-card">
+        <center>
+        <img src="https://kinclimg3.bluestone.com/f_jpg,c_scale,w_828,q_80,b_rgb:f0f0f0/giproduct/BISS0103R657_YAA18DIG6XXXXXXXX_ABCD00-PICS-00001-1024-85156.png"alt="Mens Ring" height="200px" width="200px">
+        <p>Mens Ring & Price: ₹3999</p>
+        <button onclick="addToCart('Mens Ring',3999)" id="btn1">Add to Cart</button>
+         </center>
+    </div>
+    <div class="product-card">
+        <center>
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSx2EPF-l3w9ywqWRkMcfy_zOMy_IxBEy9tKu1tfzYiTi9ztdYx6HiVPiujEF6nBc6F7xTjyTs3z2XMBpg99tLbxsABhJhnp-egGv1vZam-RS9EWECyAdRpQQ"alt="Kids slipper" height="200px" width="200px">
+        <p>Kids slipper & Price: ₹1999</p>
+        <button onclick="addToCart('Kids slipper',1999)" id="btn1">Add to Cart</button>
+         </center>
+    </div>
+     <div class="product-card">
+        <center>
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRGMxXpAZuuMF7azblBJWdBRMkwm3xrH_Jik-GVZOAambWvO-sBR-dwaY2z1rylqY_Bx53iXniNY7iPrvk4RFIeDTAFZ7mYvr0pqBtUqSx9LXUQDfClf8y8hw"alt="Women Bag" height="200px" width="200px">
+        <p>Women Bag & Price: ₹2999</p>
+        <button onclick="addToCart('Women Bag',2999)" id="btn1">Add to Cart</button>
+         </center>
+    </div>
+    <div class="product-card">
+        <center>
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQBwQy2bwJez_wxU3LslKcugI3ZHOYTsbcoXrRvLQNSCJZSe0hAkDsWVpxpdyXBWOfFRpM8w8USb07QgWAJiXwb8DeuMnOE0GT3sWkvd3Y"alt="Womens Water Bottle" height="200px" width="200px">
+        <p>Womens Water Bottle & Price: ₹1999</p>
+        <button onclick="addToCart('Womens Water Bottle',1999)" id="btn1">Add to Cart</button>
+         </center>
+    </div>
+     <div class="product-card">
+        <center>
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS-2Pa3Mjc-fGY4-KVuo2urydhskAqrb-vs6e3b5yrsoztnUTDfipMS7Qiwi6qCOU30O0JfuLQs1LSpZVIRv0Q94XcykDCa"alt="Mens Night dress" height="200px" width="200px">
+        <p>Mens Night dress & Price: ₹2999</p>
+        <button onclick="addToCart('Mens Night dress',2999)" id="btn1">Add to Cart</button>
+         </center>
+    </div>
+     <div class="product-card">
+        <center>
+        <img src="https://diademstore.com/cdn/shop/files/LightPeachPlainSemiSilkFull-SleeveShirtwithMatchingDhotiSet4-1_360x.webp?v=1758814176"alt="Trational Mens dress" height="200px" width="200px">
+        <p>Trational Mens dress & Price: ₹2999</p>
+        <button onclick="addToCart('Trational Mens dress',2999)" id="btn1">Add to Cart</button>
+         </center>
+    </div>
+    <script>
+function searchProduct() {
+
+    let input =
+    document.getElementById("searchBox")
+    .value.toLowerCase();
+
+    let products =
+    document.querySelectorAll(".product-card");
+
+    products.forEach(product => {
+
+        let name =
+        product.innerText.toLowerCase();
+
+        if(name.includes(input)) {
+            product.style.display = "block";
+        }
+        else {
+            product.style.display = "none";
+        }
+
+    });
+}
+
+</script>
+</body>
+<script>
+
+function addToCart(name,price){
+
+    let cart =
+    JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({
+        name:name,
+        price:price
+    });
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    alert("Added To Cart");
+}
+
+</script>
+</html>

@@ -1,0 +1,132 @@
+.navbar{
+    margin: 0px;
+    color: azure;
+    background-color: darkorange;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+ul,li,h1{
+    display: inline;
+}
+ul{
+    margin-left: 50%;
+}
+button{
+    margin-left: 20px;
+    border: 2px;
+    width: 79px;
+    height: 30px;
+    border-radius: 5px;
+    background-color:brown ;
+    color: white;
+}
+button:hover{
+    transform: scale(0.9);
+    background-color:navy;
+    cursor: pointer;
+}
+body{
+    background:linear-gradient(to bottom, #fff3e0,orange);
+}
+#searchBox{
+    margin-top:15px;
+    margin-left: 30%;
+    height: 40px;
+    width: 600px;
+    text-align:center;
+    border-radius: 15px solid;
+    display: block;
+}
+#product_name{
+    margin-left:700px;
+}
+.product-card{
+    background-color: #fff3e0;
+    height: 300px;
+    width:250px;
+    margin:20px ;
+    border: 3px double;
+    border-radius: 5px;
+    display: inline-block;
+}
+.product-card:hover{
+    transform: scale(0.9);
+    background-color:  orange;
+    transition: all 1s ease-in-out;
+}
+img{
+    margin-top: 5px;
+    border-radius: 2px;
+    border:3px solid;
+}
+#btn1{
+    height: 30px;
+    width: 200px;
+    cursor:pointer;
+}
+.Card-page{
+    background: linear-gradient(to bottom, #fff3e0, orange);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#8B2323;
+    color:white;
+    padding:10px;
+}
+
+td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+#totalPrice{
+    text-align:right;
+    margin-top:20px;
+}
+.payment-section{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:20px;
+    margin-top:20px;
+}
+
+.payment-section button{
+    background:green;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:18px;
+    text-align: center;
+}
+#payment-button{
+    background-color: green;
+    text-align: center;
+}
+h3{
+    margin-left:30%;
+}
+input[type="text"],input[type="date"],input[type="month"],input[type="email"],input[type="tel"],input[type="password"]{
+    display:inline;
+    margin-right: 80px;
+    border-radius: 15px;
+    border:2px solid;
+    height: 40px;
+    width: 600px;
+    text-align:center;
+    margin-top:15px;
+    margin-left: 30%;
+
+}

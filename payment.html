@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega_Mart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 id="nav">Mega <em>Mart</em></h1>
+        <ul>
+            <li><button onclick="window.location.href='Home.html'">🏚️Home</button></li>
+            <li><button onclick="window.location.href='Product.html'">🛍️Product</button></li>
+            <li><button onclick="window.location.href='payment.html'">💸Buy</button></li>
+            <li><button onclick="window.location.href='Cart.html'">🛒Cart</button></li>
+            <li><button  onclick="window.location.href='index.html'">👤Login</button></li>
+        </ul>
+    </nav>
+    <center>
+    <h2 style="margin-top: 10px;">Customer Details</h2>
+    </center>
+    <div class="customer-details">
+<h3>Enter Name:<input type="text"
+       placeholder="Enter Your Name"
+       required></h3>
+
+<h3>Enter Email:<input type="email"
+       placeholder="Enter Email ID"
+       required></h3>
+
+<h3>Enter Phone Number:<input type="tel"
+       placeholder="Enter Phone Number"
+       required></h3>
+
+<h3>Enter Date of Birth:<input type="date"
+       placeholder="Enter Date of Birth"
+       required></h3>
+    </div>
+    <hr>
+<center>
+<h2>Payment Details</h2>
+</center>
+<h3>Enter Card Number:<input type="text"
+       placeholder="Card Number"></h3>
+
+<h3>Enter Card Holder Name:<input type="text"
+       placeholder="Card Holder Name"></h3>
+
+<h3>Enter CVV:<input type="password"
+       placeholder="CVV"></h3>
+
+<h3>Enter Expiry Date:<input type="month"
+       placeholder="Expiry Date"></h3>
+<hr>
+<center>
+    <h2 id="showTotal">Total price:0.00</h2>
+<button id="payment-button" onclick="paymentSuccess()">
+    Pay Now
+</button>
+</center>
+</body>
+<script>
+    window.onload = function(){
+        let total = localStorage.getItem("totalPrice");
+        if(total){
+            document.getElementById("showTotal").innerHTML = total;
+        }
+    }
+    function paymentSuccess(){
+
+    alert(
+    "Order Placed Successfully!\nThank You For Shopping With Mega Mart"
+    );
+
+    localStorage.removeItem("cart");
+
+    window.location.href = "Home.html";
+}
+</script>
+</html>
+    
