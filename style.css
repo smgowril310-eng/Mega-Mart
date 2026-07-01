@@ -179,7 +179,7 @@ li{
     }
     #searchBox{
     margin-top:15px;
-    margin-left: 20px;
+    margin-left: 10px;
     height: 40px;
     width: 340px;
     text-align:center;
@@ -212,7 +212,7 @@ li{
     }
     #product_name{
         size: 5pc;
-       margin-left: 40%;
+       margin-left: 30%;
     }
     h3{
         margin-left: 5px;
@@ -223,7 +223,7 @@ li{
     border-radius: 10px;
     border:2px solid;
     height: 30px;
-    width: 270px;
+    width: 260px;
     text-align:center;
     margin-top:15px;
     margin-left: 30%;
