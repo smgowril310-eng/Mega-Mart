@@ -157,8 +157,8 @@ input[type="text"],input[type="date"],input[type="month"],input[type="email"],in
     margin:20px ;
     border: 3px double;
     border-radius: 5px;
-    display: inline-block;
-    margin-left: 60px;
+    display: block;
+    margin-left: 50px;
 }
 #menu{
     display:flex;
@@ -181,7 +181,7 @@ li{
     margin-top:15px;
     margin-left: 20px;
     height: 40px;
-    width: 330px;
+    width: 370px;
     text-align:center;
     border-radius: 15px solid;
     display: block;
@@ -223,7 +223,7 @@ li{
     border-radius: 10px;
     border:2px solid;
     height: 30px;
-    width: 250px;
+    width: 300px;
     text-align:center;
     margin-top:15px;
     margin-left: 30%;
