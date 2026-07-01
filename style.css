@@ -152,24 +152,13 @@ input[type="text"],input[type="date"],input[type="month"],input[type="email"],in
 }
 .product-card{
     background-color: #fff3e0;
-    height: 250px;
-    width:190px;
-    margin:10px ;
-    border: 5px double;
-    border-radius: 3px;
+    height: 300px;
+    width:250px;
+    margin:20px ;
+    border: 3px double;
+    border-radius: 5px;
     display: inline-block;
-}
-img{
-    height: 150px;
-    width: 150px;
-    margin-top: 5px;
-    border-radius: 2px;
-    border:3px solid;
-}
-#btn1{
-    height: 20px;
-    width: 100px;
-    cursor:pointer;
+    margin-left: 40px;
 }
 #menu{
     display:flex;
@@ -192,7 +181,7 @@ li{
     margin-top:15px;
     margin-left: 20px;
     height: 40px;
-    width: 405px;
+    width: 370px;
     text-align:center;
     border-radius: 15px solid;
     display: block;
