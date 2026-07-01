@@ -9,7 +9,8 @@
 <body>
     <nav class="navbar">
         <h1 id="nav">Mega <em>Mart</em></h1>
-        <ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><button onclick="window.location.href='Home.html'">🏚️Home</button></li>
             <li><button onclick="window.location.href='Product.html'">🛍️Product</button></li>
             <li><button onclick="window.location.href='payment.html'">💸Buy</button></li>
@@ -105,6 +106,9 @@ button:hover{
     transform: scale(0.9);
     background-color:navy;
         }
+        .menu-icon{
+            display:none;
+        }
         .image{
             position: relative;
             margin-left:300px;
@@ -117,7 +121,12 @@ button:hover{
             width: 300px;
             border: none;
         }
-    @media screen and (max-width:768px){
+        .navbar{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+    @media (max-width:500px){
         .login-box{
             display: flex;
             flex-direction: column;
@@ -130,26 +139,80 @@ button:hover{
             width: 180px;
             height: auto;
             display: block;
+            position: relative;
+            z-index: 1;
         }
         .login-box input{
             width: 90%;
         }
-        .navbar{
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-        }
-        .navbar ul{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        #nav{
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
+    .navbar{
+    margin:0;
+    background-color:darkorange;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
+#menu{
+    display:flex;
+    gap:15px;
+    margin-left:0;
+}
+li{
+    list-style:none;
+}
+  .menu-icon{
+    margin-left: 30%;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+} 
+.menu-icon{
+        display:block;
+    }
+
+    #menu{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        margin-top:10px;
+    }
+
+    #menu li{
+        margin:8px 0;
+        text-align:center;
+    }
+
+    #menu button{
+        width:90%;
+    }
+
+    .navbar{
+        flex-wrap:wrap;
+    }
+
+    .image{
+        margin:30px auto;
+        text-align:center;
+        width:100%;
+    }
+
+    .image img{
+        width:220px;
+        height:auto;
+    }
+
+    .login-box{
+        width:90%;
+        max-width:350px;
+        margin:20px auto;
+    }
+    .image{
+        
+    }    
     }
     </style>
 <div class="image">
@@ -173,7 +236,6 @@ button:hover{
     <button onclick="login()" id="loginBtn">
         Login
     </button>
-
 </div>
 
 <script>
@@ -197,6 +259,19 @@ function login(){
 
         alert("Invalid Username or Password");
     }
+}
+
+function toggleMenu(){
+
+    let menu=document.getElementById("menu");
+
+    if(menu.style.display=="flex"){
+        menu.style.display="none";
+    }
+    else{
+        menu.style.display="flex";
+    }
+
 }
 
 </script>
