@@ -130,3 +130,114 @@ input[type="text"],input[type="date"],input[type="month"],input[type="email"],in
     margin-left: 30%;
 
 }
+.navbar{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+         .menu-icon{
+            display:none;
+        }
+ @media (max-width:500px){
+    .navbar{
+    margin:0;
+    background-color:darkorange;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
+.product-card{
+    background-color: #fff3e0;
+    height: 250px;
+    width:190px;
+    margin:10px ;
+    border: 5px double;
+    border-radius: 3px;
+    display: inline-block;
+}
+img{
+    height: 150px;
+    width: 150px;
+    margin-top: 5px;
+    border-radius: 2px;
+    border:3px solid;
+}
+#btn1{
+    height: 20px;
+    width: 100px;
+    cursor:pointer;
+}
+#menu{
+    display:flex;
+    gap:15px;
+    margin-left:0;
+}
+li{
+    list-style:none;
+}
+  .menu-icon{
+    margin-left: 30%;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+} 
+.menu-icon{
+        display:block;
+    }
+    #searchBox{
+    margin-top:15px;
+    margin-left: 20px;
+    height: 40px;
+    width: 405px;
+    text-align:center;
+    border-radius: 15px solid;
+    display: block;
+}
+
+    #menu{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        margin-top:10px;
+    }
+
+    #menu li{
+        margin:8px 0;
+        text-align:center;
+    }
+
+    #menu button{
+        width:90%;
+    }
+
+    .navbar{
+        flex-wrap:wrap;
+    }
+    p{
+        size: 1pc;
+        margin: 10px;
+    }
+    #product_name{
+        size: 5pc;
+       margin-left: 40%;
+    }
+    h3{
+        margin-left: 5px;
+    }
+    input[type="text"],input[type="date"],input[type="month"],input[type="email"],input[type="tel"],input[type="password"]{
+    display:inline;
+    margin-right: 40px;
+    border-radius: 10px;
+    border:2px solid;
+    height: 30px;
+    width: 300px;
+    text-align:center;
+    margin-top:15px;
+    margin-left: 30%;
+
+}
+ }

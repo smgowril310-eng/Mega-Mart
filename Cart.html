@@ -9,7 +9,8 @@
 <body class="Card-page">
     <nav class="navbar">
         <h1 id="nav">Mega <em>Mart</em></h1>
-        <ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><button onclick="window.location.href='Home.html'">🏚️Home</button></li>
             <li><button onclick="window.location.href='Product.html'">🛍️Product</button></li>
             <li><button onclick="window.location.href='payment.html'">💸Buy</button></li>
@@ -96,6 +97,19 @@ function removeItem(index){
 }
 
 displayCart();
+
+function toggleMenu(){
+
+    let menu=document.getElementById("menu");
+
+    if(menu.style.display=="flex"){
+        menu.style.display="none";
+    }
+    else{
+        menu.style.display="flex";
+    }
+
+}
 
 </script>
 </html>
